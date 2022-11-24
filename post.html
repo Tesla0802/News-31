@@ -22,7 +22,7 @@
     <header>
       <nav class="navbar bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">Literaturuli klubi</a>
+          <a class="navbar-brand" href="#">Literaturuli klubi</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -52,10 +52,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="./index.html"
+                  <a class="nav-link active" aria-current="page" href="./index.html"
                     >Home</a
                   >
                 </li>
@@ -73,9 +70,7 @@
                     Dropdown
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="./post.html">add Post</a>
-                    </li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
                     <li>
                       <a class="dropdown-item" href="#">Another action</a>
                     </li>
@@ -105,21 +100,29 @@
       </nav>
     </header>
 
-    <main>
-      <div class="cards">
-        <div class="card text-bg-dark">
-          <img src="./img/dark bg.png" class="card-img" alt="dark bg" />
-          <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    <section class="addPost">
+        <article>
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              placeholder="Example..."
+            />
           </div>
-        </div>
-      </div>
+          <div class="mb-3">
+            <label for="text" class="form-label">Text</label>
+            <textarea class="form-control" id="text" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <input type="file" class="form-control" id="image" />
+          </div>
+          <button class="btn btn btn-outline-success" id="button">
+            Add Post
+          </button>
+        </article>
+      </section>
     </main>
 
     <script src="./firebase.js"></script>

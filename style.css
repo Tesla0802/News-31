@@ -10,3 +10,52 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+header{
+    margin-bottom: 100px;
+}
+
+main {
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    row-gap: 20px;
+  }
+
+
+.cards{
+display: grid;
+grid-template-rows: repeat(3, 1fr);
+}
+
+.card{
+    width: 40rem;
+    
+}
+
+main{
+    margin-top: 80px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    row-gap: 20px;
+}
+
+main .addPost button {
+    width: 100%;
+  }
+  
+  main .displayPosts {
+    width: 100%;
+    display: grid !important;
+    place-items: center;
+  }
+  
+  main .displayPosts article {
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
