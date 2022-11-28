@@ -4,11 +4,15 @@
 }
 
 body{
-    background-image: url(img/light\ bg.png);
+    background-image: url("./img/light\ bg.png");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 header{
@@ -59,3 +63,7 @@ main .addPost button {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+.swich{
+  padding-left: 1rem;
+}
