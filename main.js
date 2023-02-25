@@ -36,6 +36,6 @@ function displayAlert(title, text, icon) {
 // });
 
 
-Variability.addEventListener("click", () =>{
-    body.style.backgroundColor = "#F7B0BB"
+lable.addEventListener("click", () =>{
+    body.style.backgroundColor = "url(./img/dark\ bg.png)"
 })
