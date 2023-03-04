@@ -1,41 +1,32 @@
-const cards =  document.querySelector(".cards")
-const Variability = document.querySelector(".form-switch");
-const lable = document.querySelector(".form-check-label")
-const body = document.querySelector("body");
-
 function displayAlert(title, text, icon) {
-    Swal.fire({
-      icon: icon,
-      text: text,
-      title: title,
-    });
+  Swal.fire({
+    icon: icon,
+    text: text,
+    title: title,
+  });
+}
+
+if (localStorage.getItem("userid")) {
+  let url = location.href.split("/")[3];
+  if (url === "login.html" || url === "register.html") {
+    location.href = "index.html";
   }
+  document.querySelectorAll(".clear").forEach((element) => {
+    element.remove();
+  });
+  const notVissible = document.querySelectorAll(".not-vissible");
+  notVissible.forEach((element) => {
+    element.style.display = "inline-block";
+  });
+  const logOut = document.querySelector(".logout");
+  logOut.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+  });
+}
 
-  // let logic = true
-
-  // Variability.addEventListener("click", () => {
-  //   if(logic){
-  //     body.style.backgroundImage = "url(./img/dark\ bg.png)";
-  //   }else{
-  //     body.style.backgroundImage = "url(./img/light\ bg.png)";
-  //   }
-
-  //   logic = !logic
-  // })
-
-
-//   let logic = true;
-
-// Variability.addEventListener("click", () => {
-//   if (logic) {
-//     body.style.backgroundImage = "url(./img/dark\ bg.png)";
-//   } else {
-//     body.style.backgroundImage = "url(./img/light\ bg.png)";
-//   }
-//   logic = !logic;
-// });
-
-
-lable.addEventListener("click", () =>{
-    body.style.backgroundColor = "url(./img/dark\ bg.png)"
-})
+if (!localStorage.getItem("userid")) {
+  if (location.href.split("/")[3] === "livechat.html") {
+    location.href = "index.html";
+  }
+}

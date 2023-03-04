@@ -23,9 +23,6 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="progress">
-      <span id="progress-value"></span>
-    </div>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -42,41 +39,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <article class="search">
-              <input id="searchInput" type="text" class="form-control" />
-              <div id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-            </article>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
-              <li class="nav-item clear">
-                <a class="nav-link" href="./login.html">Login</a>
+              <li class="nav-item">
+                <a class="nav-link active" href="./login.html">Login</a>
               </li>
-              <li class="nav-item clear">
+              <li class="nav-item">
                 <a class="nav-link" href="./register.html">Register</a>
-              </li>
-              <li>
-                <a class="nav-link not-vissible" href="./createPost.html"
-                  >Add post</a
-                >
-              </li>
-              <li>
-                <a class="nav-link not-vissible" href="./edit.html">
-                  Edit User
-                </a>
-              </li>
-              <li>
-                <a class="nav-link not-vissible logout" href="./register.html"
-                  >Log out</a
-                >
               </li>
             </ul>
           </div>
@@ -84,26 +57,29 @@
       </nav>
     </header>
     <main>
-      <section class="not-vissible displayPosts">
-        <article id="displayPost">
-          <div class="loading">
-            <div class="content-container">
-              <div class="sk-folding-cube">
-                <div class="sk-cube1 sk-cube"></div>
-                <div class="sk-cube2 sk-cube"></div>
-                <div class="sk-cube4 sk-cube"></div>
-                <div class="sk-cube3 sk-cube"></div>
-              </div>
-            </div>
+      <section class="register">
+        <aside class="top">
+          <h3>Log In</h3>
+        </aside>
+        <aside class="bottom">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" />
           </div>
-        </article>
-        <article class="displayAfter"></article>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" />
+          </div>
+          <button
+            type="submit"
+            id="submitButton"
+            class="btn btn-outline-success"
+          >
+            Submit
+          </button>
+        </aside>
       </section>
     </main>
-    <script
-      src="https://kit.fontawesome.com/af6bc85f41.js"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
@@ -115,8 +91,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
     <script src="./firebase.js"></script>
-    <script src="./scroll.js"></script>
-    <script src="./post.js"></script>
     <script src="./main.js"></script>
+    <script src="./login.js"></script>
   </body>
 </html>
