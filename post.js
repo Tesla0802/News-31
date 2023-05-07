@@ -3,8 +3,8 @@ const searchBtn = document.querySelector("#search");
 const displayPost = document.querySelector("#displayPost");
 const postArray = getArrayFromFirebase("Post");
 const displayAfter = document.querySelector(".displayAfter");
-const img = document.querySelector(".card-img-top")
-const card = document.querySelector(".card")
+const img = document.querySelector(".card-img-top");
+const card = document.querySelector(".card");
 
 let logic = true;
 if (localStorage.getItem("userid")) {
@@ -65,7 +65,7 @@ function displayData(displayElement, element, key) {
   <img src="${element.imgSrc}" class="card-img-top" alt="photo">
   <div class="card-body">
     <h5 class="card-title">${element.title}</h5>
-    <p class="card-text">ავტორი: ${element.text}</p>
+    <p class="card-text">ინფორმაცია: ${element.text}</p>
     <p class="card-text">Upload Time : ${element.uploadTime}</p>
     <button class="btn btn-danger hideOnSearch" onclick="deletePost('${key}')">Delete</button>
   </div>
@@ -77,4 +77,3 @@ function deletePost(key) {
   removeElementFromFirebase("Post", key);
   location.reload();
 }
-

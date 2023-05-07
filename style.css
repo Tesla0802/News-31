@@ -7,10 +7,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #f5f5f5;
+  color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -37,8 +40,7 @@ body {
   place-items: center;
   font-weight: 600;
   font-size: 0px;
-}  
-
+}
 
 header {
   width: 100%;
@@ -49,7 +51,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background: linear-gradient(90deg, #ece9e6cc, #ffffff);
   z-index: 10;
 }
 
@@ -61,9 +63,9 @@ header nav .collapse {
   justify-content: flex-end;
 }
 
-.navbar a{
-  color: #009C7C;
-  font-size: 1.5rem;
+.navbar a {
+  color: #1d1d1d;
+  font-size: 1.3rem;
 }
 
 header nav .container-fluid {
@@ -71,7 +73,7 @@ header nav .container-fluid {
 }
 
 header nav .active {
-  color: red !important;
+  color: #ff0000 !important;
 
   font-weight: bold;
 }
@@ -88,13 +90,13 @@ header .collapse .search {
   gap: 20px;
 }
 
-header .collapse .search input{
-  color: #f5f5f5;
+header .collapse .search input {
+  color: #1d1d1d;
 }
 
 ::selection {
-  background-color: #f5f5f5;
-  color: #1c1f25;
+  background-color: #1d1d1d;
+  color: #f5f5f5;
 }
 
 .displayAfter {
@@ -105,22 +107,31 @@ header .collapse .search input{
 
 header .collapse .search i {
   cursor: pointer;
+  transition: all ease-out 0.3s;
 }
 
 header .collapse .search i:hover {
-  color: #ff0000;
+  width: 2rem;
+  height: 2rem;
+  color: #f5f5f5;
+  background-color: #232526;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in 0.3s;
 }
 
 header .collapse .search input {
   width: 200px;
   background: transparent;
-  border: 2px solid #f5f5f5;
+  border: 2px solid #1d1d1d;
   outline: none;
 }
 
 main {
   margin-top: 80px;
-  width: 100%;
+  width: 50%;
   display: grid;
   place-items: center;
   row-gap: 20px;
@@ -392,14 +403,17 @@ main .chat .top h3 {
   gap: 10px;
 }
 
-.card{
-  width: 20rem;
+.card {
+  width: 50rem;
   background: #f5f5f580;
   color: #000000;
   border: none;
+  overflow: auto;
+  max-height: 50rem;
+  margin-bottom: 10rem;
 }
 
-.card img{
+.card img {
   height: 30rem;
   object-fit: cover;
 }
