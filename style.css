@@ -409,11 +409,11 @@ main .chat .top h3 {
   color: #000000;
   border: none;
   overflow: auto;
-  max-height: 50rem;
+  max-height: 60rem;
   margin-bottom: 5rem;
 }
 
 .card img {
-  height: 30rem;
+  height: auto;
   object-fit: cover;
 }
