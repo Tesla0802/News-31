@@ -410,7 +410,7 @@ main .chat .top h3 {
   border: none;
   overflow: auto;
   max-height: 50rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .card img {
